@@ -1,0 +1,24 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+metadata:
+  name: kube-cloud-next--
+build:
+  artifacts:
+    - image: frontend-image
+      context: src/frontend-service
+    - image: voting-image
+      context: src/voting-service
+  tagPolicy:
+    sha256: {}
+  local:
+    useBuildkit: false
+    useDockerCLI: false
+deploy:
+  kubectl:
+    manifests:
+      - src/kubernetes-manifests/base/*.yaml
+      - src/kubernetes-manifests/dev/*.yaml
+profiles:
+  - build: {}
+    deploy: {}
+    name: staging

@@ -1,0 +1,12 @@
+{
+    "cloudcode.profile-cluster-map": {
+        "[default]": "minikube",
+        "staging": "minikube"
+    },
+    "cloudcode.last-used-context": {
+        "Launch App on Kubernetes Cluster: NodeJS": {
+            "kubeConfigPath": "/home/sbzuf73/.kube/config",
+            "contextName": "minikube"
+        }
+    }
+}
