@@ -5,7 +5,7 @@ WORKDIR /app
 RUN pwd
 RUN ls
 
-COPY ./package.json ./
+COPY ../src/frontend-service/package.json ./
 
 RUN npm install
 
