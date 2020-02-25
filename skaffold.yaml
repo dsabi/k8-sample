@@ -16,8 +16,7 @@ build:
 deploy:
   kubectl:
     manifests:
-      - src/kubernetes-manifests/elastic/*.yaml
-      - src/kubernetes-manifests/dev/*.yaml
+      - src/kubernetes-manifests/*.yaml
 profiles:
   - build: {}
     deploy: {}

@@ -8,5 +8,21 @@
             "kubeConfigPath": "/home/sbzuf73/.kube/config",
             "contextName": "minikube"
         }
-    }
+    },
+    "git.autofetch": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.requireConfig": false,
+    "editor.formatOnSave": true
 }
