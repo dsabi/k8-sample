@@ -2,7 +2,7 @@ FROM docker.io/node:13-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json ./
 
 RUN npm install
 
