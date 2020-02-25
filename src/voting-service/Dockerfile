@@ -2,7 +2,7 @@ FROM docker.io/node:13-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY ./src/voting-service/package.json ./
 
 RUN npm install
 
