@@ -2,7 +2,7 @@ name: Greet everyone
 on:
   push:
     branches:
-      - master
+      - master2
 
 jobs:
   build:
