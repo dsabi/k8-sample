@@ -5,8 +5,7 @@ on:
     paths:
       - "src/voting-service/**"
       - "!src/voting-service/**.md"
-    tags:
-      - v
+
 jobs:
   build:
     runs-on: ubuntu-latest
