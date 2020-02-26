@@ -1,0 +1,16 @@
+name: Greet everyone
+on:
+  push:
+    paths:
+      - "src/frontend-service/**"
+      - "!src/frontend-service/**.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # if: "contains(github.event.head_commit.message, 'build frontend')"
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file ./src/frontend-service/Dockerfile --tag frontend-service-image:$(date +%s)

@@ -1,0 +1,17 @@
+name: Docker Image CI
+
+on:
+  push:
+    paths:
+      - "src/voting-service/**"
+      - "!src/voting-service/**.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # if: "contains(github.event.head_commit.message, 'build voting')"
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file ./src/voting-service/Dockerfile --tag voting-service-image:$(date +%s)
