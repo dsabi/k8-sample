@@ -3,11 +3,12 @@ name: Docker Image CI
 on:
   push:
     branches:
-      - master2
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, 'build dock')"
 
     steps:
       - uses: actions/checkout@v2
