@@ -1,4 +1,4 @@
-name: Greet everyone
+name: Frontend
 on:
   push:
     paths:
