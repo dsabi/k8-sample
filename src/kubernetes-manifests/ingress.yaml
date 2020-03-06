@@ -9,11 +9,19 @@ spec:
   rules:
     - http:
         paths:
+          # - path: /
+          #   backend:
+          #     serviceName: frontend-service
+          #     servicePort: 4001
+          # - path: /vote
+          #   backend:
+          #     serviceName: voting-service
+          #     servicePort: 4002
+          # - path: /
+          #   backend:
+          #     serviceName: redis-commander
+          #     servicePort: 8081
           - path: /
             backend:
-              serviceName: frontend-service
-              servicePort: 4001
-          - path: /vote
-            backend:
-              serviceName: voting-service
-              servicePort: 4002
+              serviceName: redis-arena
+              servicePort: 4567

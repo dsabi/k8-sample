@@ -7,6 +7,10 @@
         "Launch App on Kubernetes Cluster: NodeJS": {
             "kubeConfigPath": "/home/sbzuf73/.kube/config",
             "contextName": "minikube"
+        },
+        "Run on Kubernetes": {
+            "kubeConfigPath": "/home/sbzuf73/.kube/config",
+            "contextName": "minikube"
         }
     },
     "git.autofetch": true,
@@ -24,5 +28,6 @@
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.requireConfig": false,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "cloudcode.isDeployDeprecationMessageShown": true
 }

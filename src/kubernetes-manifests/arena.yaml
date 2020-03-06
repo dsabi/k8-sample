@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-arena
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-arena
+  template:
+    metadata:
+      labels:
+        app: redis-arena
+        tier: backend
+    spec:
+      containers:
+        - name: redis-arena
+          image: mixmaxhq/arena
+          ports:
+            - name: redis-arena
+              containerPort: 4567
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-arena
+  labels:
+    app: redis-arena
+    tier: backend
+spec:
+  ports:
+    - port: 4567
+      targetPort: redis-arena
+      name: redis-arena
+  selector:
+    app: redis-arena
+    tier: backend
